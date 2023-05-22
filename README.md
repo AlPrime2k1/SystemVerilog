@@ -1,2 +1,2 @@
 # SystemVerilog
-This repository consists of the files that i developed while learning SystemVerilog
+This repository consists of the files that I have developed while learning SystemVerilog.
