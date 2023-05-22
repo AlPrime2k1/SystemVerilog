@@ -1,0 +1,29 @@
+# //  Questa Sim
+# //  Version 10.0b win32 May  5 2011
+# //
+# //  Copyright 1991-2011 Mentor Graphics Corporation
+# //  All Rights Reserved.
+# //
+# //  THIS WORK CONTAINS TRADE SECRET AND PROPRIETARY INFORMATION
+# //  WHICH IS THE PROPERTY OF MENTOR GRAPHICS CORPORATION OR ITS
+# //  LICENSORS AND IS SUBJECT TO LICENSE TERMS.
+# //
+# vsim -novopt dff_top 
+# Refreshing C:\Users\kirti\Desktop\Questa\dff_program\SIM\work.dff_top
+# Loading sv_std.std
+# Loading work.dff_top
+# Refreshing C:\Users\kirti\Desktop\Questa\dff_program\SIM\work.dff_prog
+# Loading work.dff_prog
+# Refreshing C:\Users\kirti\Desktop\Questa\dff_program\SIM\work.dff_design
+# Loading work.dff_design
+#  
+add wave  \
+sim:/dff_top/clk \
+sim:/dff_top/rst \
+sim:/dff_top/d \
+sim:/dff_top/q
+run -all
+# ** Note: $finish    : ../TB/dff_prog.sv(28)
+#    Time: 45 ns  Iteration: 0  Instance: /dff_top/PROG
+# 1
+# Break in Module dff_prog at ../TB/dff_prog.sv line 28
