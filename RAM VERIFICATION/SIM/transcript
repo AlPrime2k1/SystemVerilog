@@ -1,0 +1,786 @@
+# vsim +back_to_back -coverage -do {coverage save -onexit -directive -cvg -codeAll RAMCOV4.ucdb;run -all} -c -vopt work.ram_tb_top 
+# //  Questa Sim
+# //  Version 10.0b win32 May  5 2011
+# //
+# //  Copyright 1991-2011 Mentor Graphics Corporation
+# //  All Rights Reserved.
+# //
+# //  THIS WORK CONTAINS TRADE SECRET AND PROPRIETARY INFORMATION
+# //  WHICH IS THE PROPERTY OF MENTOR GRAPHICS CORPORATION OR ITS
+# //  LICENSORS AND IS SUBJECT TO LICENSE TERMS.
+# //
+# Loading sv_std.std
+# Loading work.ram_pkg
+# Loading work.ram_tb_top_sv_unit
+# Loading work.ram_tb_top(fast)
+# Loading work.ram_if(fast)
+# Loading work.ram(fast)
+# coverage save -onexit -directive -cvg -codeAll RAMCOV4.ucdb 
+# run -all 
+# ** Warning: (vsim-WLF-5000) WLF file currently in use: vsim.wlf
+#           File in use by:   Hostname:   ProcessID: 4
+#           Attempting to use alternate WLF file "./wlftrft82t".
+# ** Warning: (vsim-WLF-5001) Could not open WLF file: vsim.wlf
+#           Using alternate file: ./wlftrft82t
+# ** Info: -------------[Write_Driver]-------------
+#    Time: 5 ns  Scope: ram_pkg.ram_wd.send_to_dut File: ../ENV/ram_wd.sv Line: 43
+# ---------------------------------------------------
+# |    Name     |     Data         |       Time      |
+# ---------------------------------------------------
+# |    RST       |         1        |         5     |
+# |    ENUM      |     WRITE        |         5     |
+# |    WR_ADDR   |         4        |         5     |
+# |    WR_DATA   |       122        |         5     |
+# 	------------------------------------------
+# |    RD_ADDR   |         0        |         5     |
+# |    RD_DATA   |         0        |         5     |
+# -----------------------------------------------
+# Time =  5	WMON to REF='{trans_enum_1:IDLE, rst:0, wr_addr:0, wr_data:0, rd_addr:0, rd_data:0, rd_tran_count:0, wr_tran_count:0}
+# ** Info: -------------[Read_Driver]-------------
+#    Time: 5 ns  Scope: ram_pkg.ram_rd.send_to_dut File: ../ENV/ram_rd.sv Line: 39
+# ---------------------------------------------------
+# |    Name     |     Data         |       Time      |
+# ---------------------------------------------------
+# |    RST       |         1        |         5     |
+# |    ENUM      |     WRITE        |         5     |
+# |    WR_ADDR   |         4        |         5     |
+# |    WR_DATA   |       122        |         5     |
+# 	------------------------------------------
+# |    RD_ADDR   |         0        |         5     |
+# |    RD_DATA   |         0        |         5     |
+# -----------------------------------------------
+# WR_COUNT=0	RD_COUNT=0
+# 
+# 
+# -=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=- 
+# REF to SCB ='{trans_enum_1:IDLE, rst:0, wr_addr:0, wr_data:0, rd_addr:0, rd_data:0, rd_tran_count:0, wr_tran_count:0}
+# MEMORY ='{0, 0, 0, 0, 0, 0, 0, 0}
+# -----------[SCOREBOARD]----------
+# ** Info: -------SUCCESS-------
+# | act_data =    0 | exp_data =    0 | time =    5 |
+#    Time: 5 ns  Scope: ram_pkg.ram_sb.check_data File: ../ENV/ram_sb.sv Line: 127
+# -----------------------------------------------------------------------------------
+# ** Info: -------------[Write_Driver]-------------
+#    Time: 15 ns  Scope: ram_pkg.ram_wd.send_to_dut File: ../ENV/ram_wd.sv Line: 43
+# ---------------------------------------------------
+# |    Name     |     Data         |       Time      |
+# ---------------------------------------------------
+# |    RST       |         0        |        15     |
+# |    ENUM      |     WRITE        |        15     |
+# |    WR_ADDR   |         7        |        15     |
+# |    WR_DATA   |       186        |        15     |
+# 	------------------------------------------
+# |    RD_ADDR   |         9        |        15     |
+# |    RD_DATA   |         0        |        15     |
+# -----------------------------------------------
+# Time = 15	WMON to REF='{trans_enum_1:WRITE, rst:1, wr_addr:4, wr_data:122, rd_addr:0, rd_data:0, rd_tran_count:0, wr_tran_count:0}
+# ** Info: -------------[Read_Driver]-------------
+#    Time: 15 ns  Scope: ram_pkg.ram_rd.send_to_dut File: ../ENV/ram_rd.sv Line: 39
+# ---------------------------------------------------
+# |    Name     |     Data         |       Time      |
+# ---------------------------------------------------
+# |    RST       |         0        |        15     |
+# |    ENUM      |     WRITE        |        15     |
+# |    WR_ADDR   |         7        |        15     |
+# |    WR_DATA   |       186        |        15     |
+# 	------------------------------------------
+# |    RD_ADDR   |         9        |        15     |
+# |    RD_DATA   |         0        |        15     |
+# -----------------------------------------------
+# WR_COUNT=1	RD_COUNT=0
+# 
+# 
+# -=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=- 
+# REF to SCB ='{trans_enum_1:WRITE, rst:0, wr_addr:0, wr_data:0, rd_addr:0, rd_data:0, rd_tran_count:0, wr_tran_count:1}
+# MEMORY ='{0, 0, 0, 0, 0, 0, 0, 0}
+# -----------[SCOREBOARD]----------
+# ** Info: -------SUCCESS-------
+# | act_data =    0 | exp_data =    0 | time =   15 |
+#    Time: 15 ns  Scope: ram_pkg.ram_sb.check_data File: ../ENV/ram_sb.sv Line: 127
+# -----------------------------------------------------------------------------------
+# ** Info: -------------[Write_Driver]-------------
+#    Time: 25 ns  Scope: ram_pkg.ram_wd.send_to_dut File: ../ENV/ram_wd.sv Line: 43
+# ---------------------------------------------------
+# |    Name     |     Data         |       Time      |
+# ---------------------------------------------------
+# |    RST       |         0        |        25     |
+# |    ENUM      |      READ        |        25     |
+# |    WR_ADDR   |         2        |        25     |
+# |    WR_DATA   |       236        |        25     |
+# 	------------------------------------------
+# |    RD_ADDR   |         2        |        25     |
+# |    RD_DATA   |         0        |        25     |
+# -----------------------------------------------
+# Time = 25	WMON to REF='{trans_enum_1:WRITE, rst:0, wr_addr:7, wr_data:186, rd_addr:0, rd_data:0, rd_tran_count:0, wr_tran_count:1}
+# ** Info: -------------[Read_Driver]-------------
+#    Time: 25 ns  Scope: ram_pkg.ram_rd.send_to_dut File: ../ENV/ram_rd.sv Line: 39
+# ---------------------------------------------------
+# |    Name     |     Data         |       Time      |
+# ---------------------------------------------------
+# |    RST       |         0        |        25     |
+# |    ENUM      |      READ        |        25     |
+# |    WR_ADDR   |         2        |        25     |
+# |    WR_DATA   |       236        |        25     |
+# 	------------------------------------------
+# |    RD_ADDR   |         2        |        25     |
+# |    RD_DATA   |         0        |        25     |
+# -----------------------------------------------
+# WR_COUNT=1	RD_COUNT=1
+# 
+# 
+# -=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=- 
+# REF to SCB ='{trans_enum_1:WRITE, rst:0, wr_addr:0, wr_data:0, rd_addr:9, rd_data:0, rd_tran_count:1, wr_tran_count:1}
+# MEMORY ='{0, 0, 0, 0, 0, 0, 0, 186}
+# -----------[SCOREBOARD]----------
+# ** Info: -------SUCCESS-------
+# | act_data =    0 | exp_data =    0 | time =   25 |
+#    Time: 25 ns  Scope: ram_pkg.ram_sb.check_data File: ../ENV/ram_sb.sv Line: 127
+# -----------------------------------------------------------------------------------
+# ** Info: -------------[Write_Driver]-------------
+#    Time: 35 ns  Scope: ram_pkg.ram_wd.send_to_dut File: ../ENV/ram_wd.sv Line: 43
+# ---------------------------------------------------
+# |    Name     |     Data         |       Time      |
+# ---------------------------------------------------
+# |    RST       |         0        |        35     |
+# |    ENUM      |     WRITE        |        35     |
+# |    WR_ADDR   |         1        |        35     |
+# |    WR_DATA   |       237        |        35     |
+# 	------------------------------------------
+# |    RD_ADDR   |         7        |        35     |
+# |    RD_DATA   |         0        |        35     |
+# -----------------------------------------------
+# Time = 35	WMON to REF='{trans_enum_1:READ, rst:0, wr_addr:2, wr_data:236, rd_addr:0, rd_data:0, rd_tran_count:1, wr_tran_count:1}
+# ** Info: -------------[Read_Driver]-------------
+#    Time: 35 ns  Scope: ram_pkg.ram_rd.send_to_dut File: ../ENV/ram_rd.sv Line: 39
+# ---------------------------------------------------
+# |    Name     |     Data         |       Time      |
+# ---------------------------------------------------
+# |    RST       |         0        |        35     |
+# |    ENUM      |     WRITE        |        35     |
+# |    WR_ADDR   |         1        |        35     |
+# |    WR_DATA   |       237        |        35     |
+# 	------------------------------------------
+# |    RD_ADDR   |         7        |        35     |
+# |    RD_DATA   |         0        |        35     |
+# -----------------------------------------------
+# WR_COUNT=2	RD_COUNT=1
+# 
+# 
+# -=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=- 
+# REF to SCB ='{trans_enum_1:READ, rst:0, wr_addr:0, wr_data:0, rd_addr:2, rd_data:0, rd_tran_count:1, wr_tran_count:2}
+# MEMORY ='{0, 0, 0, 0, 0, 0, 0, 186}
+# -----------[SCOREBOARD]----------
+# ** Info: -------SUCCESS-------
+# | act_data =    0 | exp_data =    0 | time =   35 |
+#    Time: 35 ns  Scope: ram_pkg.ram_sb.check_data File: ../ENV/ram_sb.sv Line: 127
+# -----------------------------------------------------------------------------------
+# ** Info: -------------[Write_Driver]-------------
+#    Time: 45 ns  Scope: ram_pkg.ram_wd.send_to_dut File: ../ENV/ram_wd.sv Line: 43
+# ---------------------------------------------------
+# |    Name     |     Data         |       Time      |
+# ---------------------------------------------------
+# |    RST       |         0        |        45     |
+# |    ENUM      |      READ        |        45     |
+# |    WR_ADDR   |         8        |        45     |
+# |    WR_DATA   |        11        |        45     |
+# 	------------------------------------------
+# |    RD_ADDR   |         1        |        45     |
+# |    RD_DATA   |         0        |        45     |
+# -----------------------------------------------
+# Time = 45	WMON to REF='{trans_enum_1:WRITE, rst:0, wr_addr:1, wr_data:237, rd_addr:0, rd_data:0, rd_tran_count:1, wr_tran_count:2}
+# ** Info: -------------[Read_Driver]-------------
+#    Time: 45 ns  Scope: ram_pkg.ram_rd.send_to_dut File: ../ENV/ram_rd.sv Line: 39
+# ---------------------------------------------------
+# |    Name     |     Data         |       Time      |
+# ---------------------------------------------------
+# |    RST       |         0        |        45     |
+# |    ENUM      |      READ        |        45     |
+# |    WR_ADDR   |         8        |        45     |
+# |    WR_DATA   |        11        |        45     |
+# 	------------------------------------------
+# |    RD_ADDR   |         1        |        45     |
+# |    RD_DATA   |         0        |        45     |
+# -----------------------------------------------
+# WR_COUNT=2	RD_COUNT=2
+# 
+# 
+# -=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=- 
+# REF to SCB ='{trans_enum_1:WRITE, rst:0, wr_addr:0, wr_data:0, rd_addr:7, rd_data:0, rd_tran_count:2, wr_tran_count:2}
+# MEMORY ='{0, 237, 0, 0, 0, 0, 0, 186}
+# -----------[SCOREBOARD]----------
+# ** Info: -------SUCCESS-------
+# | act_data =    0 | exp_data =    0 | time =   45 |
+#    Time: 45 ns  Scope: ram_pkg.ram_sb.check_data File: ../ENV/ram_sb.sv Line: 127
+# -----------------------------------------------------------------------------------
+# ** Info: -------------[Write_Driver]-------------
+#    Time: 55 ns  Scope: ram_pkg.ram_wd.send_to_dut File: ../ENV/ram_wd.sv Line: 43
+# ---------------------------------------------------
+# |    Name     |     Data         |       Time      |
+# ---------------------------------------------------
+# |    RST       |         0        |        55     |
+# |    ENUM      |     WRITE        |        55     |
+# |    WR_ADDR   |         5        |        55     |
+# |    WR_DATA   |        11        |        55     |
+# 	------------------------------------------
+# |    RD_ADDR   |         4        |        55     |
+# |    RD_DATA   |         0        |        55     |
+# -----------------------------------------------
+# Time = 55	WMON to REF='{trans_enum_1:READ, rst:0, wr_addr:8, wr_data:11, rd_addr:0, rd_data:0, rd_tran_count:2, wr_tran_count:2}
+# ** Info: -------------[Read_Driver]-------------
+#    Time: 55 ns  Scope: ram_pkg.ram_rd.send_to_dut File: ../ENV/ram_rd.sv Line: 39
+# ---------------------------------------------------
+# |    Name     |     Data         |       Time      |
+# ---------------------------------------------------
+# |    RST       |         0        |        55     |
+# |    ENUM      |     WRITE        |        55     |
+# |    WR_ADDR   |         5        |        55     |
+# |    WR_DATA   |        11        |        55     |
+# 	------------------------------------------
+# |    RD_ADDR   |         4        |        55     |
+# |    RD_DATA   |         0        |        55     |
+# -----------------------------------------------
+# WR_COUNT=3	RD_COUNT=2
+# 
+# 
+# -=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=- 
+# REF to SCB ='{trans_enum_1:READ, rst:0, wr_addr:0, wr_data:0, rd_addr:1, rd_data:237, rd_tran_count:2, wr_tran_count:3}
+# MEMORY ='{0, 237, 0, 0, 0, 0, 0, 186}
+# -----------[SCOREBOARD]----------
+# ** Info: -------SUCCESS-------
+# | act_data =  237 | exp_data =  237 | time =   55 |
+#    Time: 55 ns  Scope: ram_pkg.ram_sb.check_data File: ../ENV/ram_sb.sv Line: 127
+# -----------------------------------------------------------------------------------
+# ** Info: -------------[Write_Driver]-------------
+#    Time: 65 ns  Scope: ram_pkg.ram_wd.send_to_dut File: ../ENV/ram_wd.sv Line: 43
+# ---------------------------------------------------
+# |    Name     |     Data         |       Time      |
+# ---------------------------------------------------
+# |    RST       |         0        |        65     |
+# |    ENUM      |      READ        |        65     |
+# |    WR_ADDR   |         6        |        65     |
+# |    WR_DATA   |       231        |        65     |
+# 	------------------------------------------
+# |    RD_ADDR   |         3        |        65     |
+# |    RD_DATA   |         0        |        65     |
+# -----------------------------------------------
+# Time = 65	WMON to REF='{trans_enum_1:WRITE, rst:0, wr_addr:5, wr_data:11, rd_addr:0, rd_data:0, rd_tran_count:2, wr_tran_count:3}
+# ** Info: -------------[Read_Driver]-------------
+#    Time: 65 ns  Scope: ram_pkg.ram_rd.send_to_dut File: ../ENV/ram_rd.sv Line: 39
+# ---------------------------------------------------
+# |    Name     |     Data         |       Time      |
+# ---------------------------------------------------
+# |    RST       |         0        |        65     |
+# |    ENUM      |      READ        |        65     |
+# |    WR_ADDR   |         6        |        65     |
+# |    WR_DATA   |       231        |        65     |
+# 	------------------------------------------
+# |    RD_ADDR   |         3        |        65     |
+# |    RD_DATA   |         0        |        65     |
+# -----------------------------------------------
+# WR_COUNT=3	RD_COUNT=3
+# 
+# 
+# -=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=- 
+# REF to SCB ='{trans_enum_1:WRITE, rst:0, wr_addr:0, wr_data:0, rd_addr:4, rd_data:237, rd_tran_count:3, wr_tran_count:3}
+# MEMORY ='{0, 237, 0, 0, 0, 11, 0, 186}
+# -----------[SCOREBOARD]----------
+# ** Info: -------SUCCESS-------
+# | act_data =  237 | exp_data =  237 | time =   65 |
+#    Time: 65 ns  Scope: ram_pkg.ram_sb.check_data File: ../ENV/ram_sb.sv Line: 127
+# -----------------------------------------------------------------------------------
+# ** Info: -------------[Write_Driver]-------------
+#    Time: 75 ns  Scope: ram_pkg.ram_wd.send_to_dut File: ../ENV/ram_wd.sv Line: 43
+# ---------------------------------------------------
+# |    Name     |     Data         |       Time      |
+# ---------------------------------------------------
+# |    RST       |         0        |        75     |
+# |    ENUM      |     WRITE        |        75     |
+# |    WR_ADDR   |         3        |        75     |
+# |    WR_DATA   |       119        |        75     |
+# 	------------------------------------------
+# |    RD_ADDR   |         8        |        75     |
+# |    RD_DATA   |         0        |        75     |
+# -----------------------------------------------
+# Time = 75	WMON to REF='{trans_enum_1:READ, rst:0, wr_addr:6, wr_data:231, rd_addr:0, rd_data:0, rd_tran_count:3, wr_tran_count:3}
+# ** Info: -------------[Read_Driver]-------------
+#    Time: 75 ns  Scope: ram_pkg.ram_rd.send_to_dut File: ../ENV/ram_rd.sv Line: 39
+# ---------------------------------------------------
+# |    Name     |     Data         |       Time      |
+# ---------------------------------------------------
+# |    RST       |         0        |        75     |
+# |    ENUM      |     WRITE        |        75     |
+# |    WR_ADDR   |         3        |        75     |
+# |    WR_DATA   |       119        |        75     |
+# 	------------------------------------------
+# |    RD_ADDR   |         8        |        75     |
+# |    RD_DATA   |         0        |        75     |
+# -----------------------------------------------
+# WR_COUNT=4	RD_COUNT=3
+# 
+# 
+# -=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=- 
+# REF to SCB ='{trans_enum_1:READ, rst:0, wr_addr:0, wr_data:0, rd_addr:3, rd_data:0, rd_tran_count:3, wr_tran_count:4}
+# MEMORY ='{0, 237, 0, 0, 0, 11, 0, 186}
+# -----------[SCOREBOARD]----------
+# ** Info: -------SUCCESS-------
+# | act_data =    0 | exp_data =    0 | time =   75 |
+#    Time: 75 ns  Scope: ram_pkg.ram_sb.check_data File: ../ENV/ram_sb.sv Line: 127
+# -----------------------------------------------------------------------------------
+# ** Info: -------------[Write_Driver]-------------
+#    Time: 85 ns  Scope: ram_pkg.ram_wd.send_to_dut File: ../ENV/ram_wd.sv Line: 43
+# ---------------------------------------------------
+# |    Name     |     Data         |       Time      |
+# ---------------------------------------------------
+# |    RST       |         0        |        85     |
+# |    ENUM      |      READ        |        85     |
+# |    WR_ADDR   |         9        |        85     |
+# |    WR_DATA   |       120        |        85     |
+# 	------------------------------------------
+# |    RD_ADDR   |         5        |        85     |
+# |    RD_DATA   |         0        |        85     |
+# -----------------------------------------------
+# Time = 85	WMON to REF='{trans_enum_1:WRITE, rst:0, wr_addr:3, wr_data:119, rd_addr:0, rd_data:0, rd_tran_count:3, wr_tran_count:4}
+# ** Info: -------------[Read_Driver]-------------
+#    Time: 85 ns  Scope: ram_pkg.ram_rd.send_to_dut File: ../ENV/ram_rd.sv Line: 39
+# ---------------------------------------------------
+# |    Name     |     Data         |       Time      |
+# ---------------------------------------------------
+# |    RST       |         0        |        85     |
+# |    ENUM      |      READ        |        85     |
+# |    WR_ADDR   |         9        |        85     |
+# |    WR_DATA   |       120        |        85     |
+# 	------------------------------------------
+# |    RD_ADDR   |         5        |        85     |
+# |    RD_DATA   |         0        |        85     |
+# -----------------------------------------------
+# WR_COUNT=4	RD_COUNT=4
+# 
+# 
+# -=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=- 
+# REF to SCB ='{trans_enum_1:WRITE, rst:0, wr_addr:0, wr_data:0, rd_addr:8, rd_data:0, rd_tran_count:4, wr_tran_count:4}
+# MEMORY ='{0, 237, 0, 119, 0, 11, 0, 186}
+# -----------[SCOREBOARD]----------
+# ** Info: -------SUCCESS-------
+# | act_data =    0 | exp_data =    0 | time =   85 |
+#    Time: 85 ns  Scope: ram_pkg.ram_sb.check_data File: ../ENV/ram_sb.sv Line: 127
+# -----------------------------------------------------------------------------------
+# ** Info: -------------[Write_Driver]-------------
+#    Time: 95 ns  Scope: ram_pkg.ram_wd.send_to_dut File: ../ENV/ram_wd.sv Line: 43
+# ---------------------------------------------------
+# |    Name     |     Data         |       Time      |
+# ---------------------------------------------------
+# |    RST       |         0        |        95     |
+# |    ENUM      |     WRITE        |        95     |
+# |    WR_ADDR   |         6        |        95     |
+# |    WR_DATA   |       171        |        95     |
+# 	------------------------------------------
+# |    RD_ADDR   |         6        |        95     |
+# |    RD_DATA   |         0        |        95     |
+# -----------------------------------------------
+# Time = 95	WMON to REF='{trans_enum_1:READ, rst:0, wr_addr:9, wr_data:120, rd_addr:0, rd_data:0, rd_tran_count:4, wr_tran_count:4}
+# ** Info: -------------[Read_Driver]-------------
+#    Time: 95 ns  Scope: ram_pkg.ram_rd.send_to_dut File: ../ENV/ram_rd.sv Line: 39
+# ---------------------------------------------------
+# |    Name     |     Data         |       Time      |
+# ---------------------------------------------------
+# |    RST       |         0        |        95     |
+# |    ENUM      |     WRITE        |        95     |
+# |    WR_ADDR   |         6        |        95     |
+# |    WR_DATA   |       171        |        95     |
+# 	------------------------------------------
+# |    RD_ADDR   |         6        |        95     |
+# |    RD_DATA   |         0        |        95     |
+# -----------------------------------------------
+# WR_COUNT=5	RD_COUNT=4
+# 
+# 
+# -=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=- 
+# REF to SCB ='{trans_enum_1:READ, rst:0, wr_addr:0, wr_data:0, rd_addr:5, rd_data:11, rd_tran_count:4, wr_tran_count:5}
+# MEMORY ='{0, 237, 0, 119, 0, 11, 0, 186}
+# -----------[SCOREBOARD]----------
+# ** Info: -------SUCCESS-------
+# | act_data =   11 | exp_data =   11 | time =   95 |
+#    Time: 95 ns  Scope: ram_pkg.ram_sb.check_data File: ../ENV/ram_sb.sv Line: 127
+# -----------------------------------------------------------------------------------
+# ** Info: -------------[Write_Driver]-------------
+#    Time: 105 ns  Scope: ram_pkg.ram_wd.send_to_dut File: ../ENV/ram_wd.sv Line: 43
+# ---------------------------------------------------
+# |    Name     |     Data         |       Time      |
+# ---------------------------------------------------
+# |    RST       |         0        |       105     |
+# |    ENUM      |      READ        |       105     |
+# |    WR_ADDR   |         7        |       105     |
+# |    WR_DATA   |       178        |       105     |
+# 	------------------------------------------
+# |    RD_ADDR   |         8        |       105     |
+# |    RD_DATA   |         0        |       105     |
+# -----------------------------------------------
+# Time = 105	WMON to REF='{trans_enum_1:WRITE, rst:0, wr_addr:6, wr_data:171, rd_addr:0, rd_data:0, rd_tran_count:4, wr_tran_count:5}
+# ** Info: -------------[Read_Driver]-------------
+#    Time: 105 ns  Scope: ram_pkg.ram_rd.send_to_dut File: ../ENV/ram_rd.sv Line: 39
+# ---------------------------------------------------
+# |    Name     |     Data         |       Time      |
+# ---------------------------------------------------
+# |    RST       |         0        |       105     |
+# |    ENUM      |      READ        |       105     |
+# |    WR_ADDR   |         7        |       105     |
+# |    WR_DATA   |       178        |       105     |
+# 	------------------------------------------
+# |    RD_ADDR   |         8        |       105     |
+# |    RD_DATA   |         0        |       105     |
+# -----------------------------------------------
+# WR_COUNT=5	RD_COUNT=5
+# 
+# 
+# -=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=- 
+# REF to SCB ='{trans_enum_1:WRITE, rst:0, wr_addr:0, wr_data:0, rd_addr:6, rd_data:11, rd_tran_count:5, wr_tran_count:5}
+# MEMORY ='{0, 237, 0, 119, 0, 11, 171, 186}
+# -----------[SCOREBOARD]----------
+# ** Info: -------SUCCESS-------
+# | act_data =   11 | exp_data =   11 | time =  105 |
+#    Time: 105 ns  Scope: ram_pkg.ram_sb.check_data File: ../ENV/ram_sb.sv Line: 127
+# -----------------------------------------------------------------------------------
+# ** Info: -------------[Write_Driver]-------------
+#    Time: 115 ns  Scope: ram_pkg.ram_wd.send_to_dut File: ../ENV/ram_wd.sv Line: 43
+# ---------------------------------------------------
+# |    Name     |     Data         |       Time      |
+# ---------------------------------------------------
+# |    RST       |         0        |       115     |
+# |    ENUM      |     WRITE        |       115     |
+# |    WR_ADDR   |         5        |       115     |
+# |    WR_DATA   |        37        |       115     |
+# 	------------------------------------------
+# |    RD_ADDR   |         3        |       115     |
+# |    RD_DATA   |         0        |       115     |
+# -----------------------------------------------
+# Time = 115	WMON to REF='{trans_enum_1:READ, rst:0, wr_addr:7, wr_data:178, rd_addr:0, rd_data:0, rd_tran_count:5, wr_tran_count:5}
+# ** Info: -------------[Read_Driver]-------------
+#    Time: 115 ns  Scope: ram_pkg.ram_rd.send_to_dut File: ../ENV/ram_rd.sv Line: 39
+# ---------------------------------------------------
+# |    Name     |     Data         |       Time      |
+# ---------------------------------------------------
+# |    RST       |         0        |       115     |
+# |    ENUM      |     WRITE        |       115     |
+# |    WR_ADDR   |         5        |       115     |
+# |    WR_DATA   |        37        |       115     |
+# 	------------------------------------------
+# |    RD_ADDR   |         3        |       115     |
+# |    RD_DATA   |         0        |       115     |
+# -----------------------------------------------
+# WR_COUNT=6	RD_COUNT=5
+# 
+# 
+# -=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=- 
+# REF to SCB ='{trans_enum_1:READ, rst:0, wr_addr:0, wr_data:0, rd_addr:8, rd_data:0, rd_tran_count:5, wr_tran_count:6}
+# MEMORY ='{0, 237, 0, 119, 0, 11, 171, 186}
+# -----------[SCOREBOARD]----------
+# ** Info: -------SUCCESS-------
+# | act_data =    0 | exp_data =    0 | time =  115 |
+#    Time: 115 ns  Scope: ram_pkg.ram_sb.check_data File: ../ENV/ram_sb.sv Line: 127
+# -----------------------------------------------------------------------------------
+# ** Info: -------------[Write_Driver]-------------
+#    Time: 125 ns  Scope: ram_pkg.ram_wd.send_to_dut File: ../ENV/ram_wd.sv Line: 43
+# ---------------------------------------------------
+# |    Name     |     Data         |       Time      |
+# ---------------------------------------------------
+# |    RST       |         0        |       125     |
+# |    ENUM      |      READ        |       125     |
+# |    WR_ADDR   |         8        |       125     |
+# |    WR_DATA   |        69        |       125     |
+# 	------------------------------------------
+# |    RD_ADDR   |         4        |       125     |
+# |    RD_DATA   |         0        |       125     |
+# -----------------------------------------------
+# Time = 125	WMON to REF='{trans_enum_1:WRITE, rst:0, wr_addr:5, wr_data:37, rd_addr:0, rd_data:0, rd_tran_count:5, wr_tran_count:6}
+# ** Info: -------------[Read_Driver]-------------
+#    Time: 125 ns  Scope: ram_pkg.ram_rd.send_to_dut File: ../ENV/ram_rd.sv Line: 39
+# ---------------------------------------------------
+# |    Name     |     Data         |       Time      |
+# ---------------------------------------------------
+# |    RST       |         0        |       125     |
+# |    ENUM      |      READ        |       125     |
+# |    WR_ADDR   |         8        |       125     |
+# |    WR_DATA   |        69        |       125     |
+# 	------------------------------------------
+# |    RD_ADDR   |         4        |       125     |
+# |    RD_DATA   |         0        |       125     |
+# -----------------------------------------------
+# WR_COUNT=6	RD_COUNT=6
+# 
+# 
+# -=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=- 
+# REF to SCB ='{trans_enum_1:WRITE, rst:0, wr_addr:0, wr_data:0, rd_addr:3, rd_data:0, rd_tran_count:6, wr_tran_count:6}
+# MEMORY ='{0, 237, 0, 119, 0, 37, 171, 186}
+# -----------[SCOREBOARD]----------
+# ** Info: -------SUCCESS-------
+# | act_data =    0 | exp_data =    0 | time =  125 |
+#    Time: 125 ns  Scope: ram_pkg.ram_sb.check_data File: ../ENV/ram_sb.sv Line: 127
+# -----------------------------------------------------------------------------------
+# ** Info: -------------[Write_Driver]-------------
+#    Time: 135 ns  Scope: ram_pkg.ram_wd.send_to_dut File: ../ENV/ram_wd.sv Line: 43
+# ---------------------------------------------------
+# |    Name     |     Data         |       Time      |
+# ---------------------------------------------------
+# |    RST       |         0        |       135     |
+# |    ENUM      |     WRITE        |       135     |
+# |    WR_ADDR   |         1        |       135     |
+# |    WR_DATA   |        18        |       135     |
+# 	------------------------------------------
+# |    RD_ADDR   |         1        |       135     |
+# |    RD_DATA   |         0        |       135     |
+# -----------------------------------------------
+# Time = 135	WMON to REF='{trans_enum_1:READ, rst:0, wr_addr:8, wr_data:69, rd_addr:0, rd_data:0, rd_tran_count:6, wr_tran_count:6}
+# ** Info: -------------[Read_Driver]-------------
+#    Time: 135 ns  Scope: ram_pkg.ram_rd.send_to_dut File: ../ENV/ram_rd.sv Line: 39
+# ---------------------------------------------------
+# |    Name     |     Data         |       Time      |
+# ---------------------------------------------------
+# |    RST       |         0        |       135     |
+# |    ENUM      |     WRITE        |       135     |
+# |    WR_ADDR   |         1        |       135     |
+# |    WR_DATA   |        18        |       135     |
+# 	------------------------------------------
+# |    RD_ADDR   |         1        |       135     |
+# |    RD_DATA   |         0        |       135     |
+# -----------------------------------------------
+# WR_COUNT=7	RD_COUNT=6
+# 
+# 
+# -=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=- 
+# REF to SCB ='{trans_enum_1:READ, rst:0, wr_addr:0, wr_data:0, rd_addr:4, rd_data:0, rd_tran_count:6, wr_tran_count:7}
+# MEMORY ='{0, 237, 0, 119, 0, 37, 171, 186}
+# -----------[SCOREBOARD]----------
+# ** Info: -------SUCCESS-------
+# | act_data =    0 | exp_data =    0 | time =  135 |
+#    Time: 135 ns  Scope: ram_pkg.ram_sb.check_data File: ../ENV/ram_sb.sv Line: 127
+# -----------------------------------------------------------------------------------
+# ** Info: -------------[Write_Driver]-------------
+#    Time: 145 ns  Scope: ram_pkg.ram_wd.send_to_dut File: ../ENV/ram_wd.sv Line: 43
+# ---------------------------------------------------
+# |    Name     |     Data         |       Time      |
+# ---------------------------------------------------
+# |    RST       |         0        |       145     |
+# |    ENUM      |      READ        |       145     |
+# |    WR_ADDR   |         2        |       145     |
+# |    WR_DATA   |        68        |       145     |
+# 	------------------------------------------
+# |    RD_ADDR   |         7        |       145     |
+# |    RD_DATA   |         0        |       145     |
+# -----------------------------------------------
+# Time = 145	WMON to REF='{trans_enum_1:WRITE, rst:0, wr_addr:1, wr_data:18, rd_addr:0, rd_data:0, rd_tran_count:6, wr_tran_count:7}
+# ** Info: -------------[Read_Driver]-------------
+#    Time: 145 ns  Scope: ram_pkg.ram_rd.send_to_dut File: ../ENV/ram_rd.sv Line: 39
+# ---------------------------------------------------
+# |    Name     |     Data         |       Time      |
+# ---------------------------------------------------
+# |    RST       |         0        |       145     |
+# |    ENUM      |      READ        |       145     |
+# |    WR_ADDR   |         2        |       145     |
+# |    WR_DATA   |        68        |       145     |
+# 	------------------------------------------
+# |    RD_ADDR   |         7        |       145     |
+# |    RD_DATA   |         0        |       145     |
+# -----------------------------------------------
+# WR_COUNT=7	RD_COUNT=7
+# 
+# 
+# -=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=- 
+# REF to SCB ='{trans_enum_1:WRITE, rst:0, wr_addr:0, wr_data:0, rd_addr:1, rd_data:0, rd_tran_count:7, wr_tran_count:7}
+# MEMORY ='{0, 18, 0, 119, 0, 37, 171, 186}
+# -----------[SCOREBOARD]----------
+# ** Info: -------SUCCESS-------
+# | act_data =    0 | exp_data =    0 | time =  145 |
+#    Time: 145 ns  Scope: ram_pkg.ram_sb.check_data File: ../ENV/ram_sb.sv Line: 127
+# -----------------------------------------------------------------------------------
+# ** Info: -------------[Write_Driver]-------------
+#    Time: 155 ns  Scope: ram_pkg.ram_wd.send_to_dut File: ../ENV/ram_wd.sv Line: 43
+# ---------------------------------------------------
+# |    Name     |     Data         |       Time      |
+# ---------------------------------------------------
+# |    RST       |         0        |       155     |
+# |    ENUM      |     WRITE        |       155     |
+# |    WR_ADDR   |         9        |       155     |
+# |    WR_DATA   |        87        |       155     |
+# 	------------------------------------------
+# |    RD_ADDR   |         2        |       155     |
+# |    RD_DATA   |         0        |       155     |
+# -----------------------------------------------
+# Time = 155	WMON to REF='{trans_enum_1:READ, rst:0, wr_addr:2, wr_data:68, rd_addr:0, rd_data:0, rd_tran_count:7, wr_tran_count:7}
+# ** Info: -------------[Read_Driver]-------------
+#    Time: 155 ns  Scope: ram_pkg.ram_rd.send_to_dut File: ../ENV/ram_rd.sv Line: 39
+# ---------------------------------------------------
+# |    Name     |     Data         |       Time      |
+# ---------------------------------------------------
+# |    RST       |         0        |       155     |
+# |    ENUM      |     WRITE        |       155     |
+# |    WR_ADDR   |         9        |       155     |
+# |    WR_DATA   |        87        |       155     |
+# 	------------------------------------------
+# |    RD_ADDR   |         2        |       155     |
+# |    RD_DATA   |         0        |       155     |
+# -----------------------------------------------
+# WR_COUNT=8	RD_COUNT=7
+# 
+# 
+# -=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=- 
+# REF to SCB ='{trans_enum_1:READ, rst:0, wr_addr:0, wr_data:0, rd_addr:7, rd_data:186, rd_tran_count:7, wr_tran_count:8}
+# MEMORY ='{0, 18, 0, 119, 0, 37, 171, 186}
+# -----------[SCOREBOARD]----------
+# ** Info: -------SUCCESS-------
+# | act_data =  186 | exp_data =  186 | time =  155 |
+#    Time: 155 ns  Scope: ram_pkg.ram_sb.check_data File: ../ENV/ram_sb.sv Line: 127
+# -----------------------------------------------------------------------------------
+# ** Info: -------------[Write_Driver]-------------
+#    Time: 165 ns  Scope: ram_pkg.ram_wd.send_to_dut File: ../ENV/ram_wd.sv Line: 43
+# ---------------------------------------------------
+# |    Name     |     Data         |       Time      |
+# ---------------------------------------------------
+# |    RST       |         0        |       165     |
+# |    ENUM      |      READ        |       165     |
+# |    WR_ADDR   |         4        |       165     |
+# |    WR_DATA   |       143        |       165     |
+# 	------------------------------------------
+# |    RD_ADDR   |         9        |       165     |
+# |    RD_DATA   |         0        |       165     |
+# -----------------------------------------------
+# Time = 165	WMON to REF='{trans_enum_1:WRITE, rst:0, wr_addr:9, wr_data:87, rd_addr:0, rd_data:0, rd_tran_count:7, wr_tran_count:8}
+# ** Info: -------------[Read_Driver]-------------
+#    Time: 165 ns  Scope: ram_pkg.ram_rd.send_to_dut File: ../ENV/ram_rd.sv Line: 39
+# ---------------------------------------------------
+# |    Name     |     Data         |       Time      |
+# ---------------------------------------------------
+# |    RST       |         0        |       165     |
+# |    ENUM      |      READ        |       165     |
+# |    WR_ADDR   |         4        |       165     |
+# |    WR_DATA   |       143        |       165     |
+# 	------------------------------------------
+# |    RD_ADDR   |         9        |       165     |
+# |    RD_DATA   |         0        |       165     |
+# -----------------------------------------------
+# WR_COUNT=8	RD_COUNT=8
+# 
+# 
+# -=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=- 
+# REF to SCB ='{trans_enum_1:WRITE, rst:0, wr_addr:0, wr_data:0, rd_addr:2, rd_data:186, rd_tran_count:8, wr_tran_count:8}
+# MEMORY ='{0, 18, 0, 119, 0, 37, 171, 186}
+# -----------[SCOREBOARD]----------
+# ** Info: -------SUCCESS-------
+# | act_data =  186 | exp_data =  186 | time =  165 |
+#    Time: 165 ns  Scope: ram_pkg.ram_sb.check_data File: ../ENV/ram_sb.sv Line: 127
+# -----------------------------------------------------------------------------------
+# ** Info: -------------[Write_Driver]-------------
+#    Time: 175 ns  Scope: ram_pkg.ram_wd.send_to_dut File: ../ENV/ram_wd.sv Line: 43
+# ---------------------------------------------------
+# |    Name     |     Data         |       Time      |
+# ---------------------------------------------------
+# |    RST       |         0        |       175     |
+# |    ENUM      |     WRITE        |       175     |
+# |    WR_ADDR   |         3        |       175     |
+# |    WR_DATA   |       164        |       175     |
+# 	------------------------------------------
+# |    RD_ADDR   |         0        |       175     |
+# |    RD_DATA   |         0        |       175     |
+# -----------------------------------------------
+# Time = 175	WMON to REF='{trans_enum_1:READ, rst:0, wr_addr:4, wr_data:143, rd_addr:0, rd_data:0, rd_tran_count:8, wr_tran_count:8}
+# ** Info: -------------[Read_Driver]-------------
+#    Time: 175 ns  Scope: ram_pkg.ram_rd.send_to_dut File: ../ENV/ram_rd.sv Line: 39
+# ---------------------------------------------------
+# |    Name     |     Data         |       Time      |
+# ---------------------------------------------------
+# |    RST       |         0        |       175     |
+# |    ENUM      |     WRITE        |       175     |
+# |    WR_ADDR   |         3        |       175     |
+# |    WR_DATA   |       164        |       175     |
+# 	------------------------------------------
+# |    RD_ADDR   |         0        |       175     |
+# |    RD_DATA   |         0        |       175     |
+# -----------------------------------------------
+# WR_COUNT=9	RD_COUNT=8
+# 
+# 
+# -=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=- 
+# REF to SCB ='{trans_enum_1:READ, rst:0, wr_addr:0, wr_data:0, rd_addr:9, rd_data:0, rd_tran_count:8, wr_tran_count:9}
+# MEMORY ='{0, 18, 0, 119, 0, 37, 171, 186}
+# -----------[SCOREBOARD]----------
+# ** Info: -------SUCCESS-------
+# | act_data =    0 | exp_data =    0 | time =  175 |
+#    Time: 175 ns  Scope: ram_pkg.ram_sb.check_data File: ../ENV/ram_sb.sv Line: 127
+# -----------------------------------------------------------------------------------
+# ** Info: -------------[Write_Driver]-------------
+#    Time: 185 ns  Scope: ram_pkg.ram_wd.send_to_dut File: ../ENV/ram_wd.sv Line: 43
+# ---------------------------------------------------
+# |    Name     |     Data         |       Time      |
+# ---------------------------------------------------
+# |    RST       |         0        |       185     |
+# |    ENUM      |      READ        |       185     |
+# |    WR_ADDR   |         9        |       185     |
+# |    WR_DATA   |       211        |       185     |
+# 	------------------------------------------
+# |    RD_ADDR   |         6        |       185     |
+# |    RD_DATA   |         0        |       185     |
+# -----------------------------------------------
+# Time = 185	WMON to REF='{trans_enum_1:WRITE, rst:0, wr_addr:3, wr_data:164, rd_addr:0, rd_data:0, rd_tran_count:8, wr_tran_count:9}
+# ** Info: -------------[Read_Driver]-------------
+#    Time: 185 ns  Scope: ram_pkg.ram_rd.send_to_dut File: ../ENV/ram_rd.sv Line: 39
+# ---------------------------------------------------
+# |    Name     |     Data         |       Time      |
+# ---------------------------------------------------
+# |    RST       |         0        |       185     |
+# |    ENUM      |      READ        |       185     |
+# |    WR_ADDR   |         9        |       185     |
+# |    WR_DATA   |       211        |       185     |
+# 	------------------------------------------
+# |    RD_ADDR   |         6        |       185     |
+# |    RD_DATA   |         0        |       185     |
+# -----------------------------------------------
+# WR_COUNT=9	RD_COUNT=9
+# 
+# 
+# -=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=- 
+# REF to SCB ='{trans_enum_1:WRITE, rst:0, wr_addr:0, wr_data:0, rd_addr:0, rd_data:87, rd_tran_count:9, wr_tran_count:9}
+# MEMORY ='{0, 18, 0, 164, 0, 37, 171, 186}
+# -----------[SCOREBOARD]----------
+# ** Info: -------SUCCESS-------
+# | act_data =   87 | exp_data =   87 | time =  185 |
+#    Time: 185 ns  Scope: ram_pkg.ram_sb.check_data File: ../ENV/ram_sb.sv Line: 127
+# -----------------------------------------------------------------------------------
+# ** Info: -------------[Write_Driver]-------------
+#    Time: 195 ns  Scope: ram_pkg.ram_wd.send_to_dut File: ../ENV/ram_wd.sv Line: 43
+# ---------------------------------------------------
+# |    Name     |     Data         |       Time      |
+# ---------------------------------------------------
+# |    RST       |         0        |       195     |
+# |    ENUM      |     WRITE        |       195     |
+# |    WR_ADDR   |         4        |       195     |
+# |    WR_DATA   |       196        |       195     |
+# 	------------------------------------------
+# |    RD_ADDR   |         5        |       195     |
+# |    RD_DATA   |         0        |       195     |
+# -----------------------------------------------
+# Time = 195	WMON to REF='{trans_enum_1:READ, rst:0, wr_addr:9, wr_data:211, rd_addr:0, rd_data:0, rd_tran_count:9, wr_tran_count:9}
+# ** Info: -------------[Read_Driver]-------------
+#    Time: 195 ns  Scope: ram_pkg.ram_rd.send_to_dut File: ../ENV/ram_rd.sv Line: 39
+# ---------------------------------------------------
+# |    Name     |     Data         |       Time      |
+# ---------------------------------------------------
+# |    RST       |         0        |       195     |
+# |    ENUM      |     WRITE        |       195     |
+# |    WR_ADDR   |         4        |       195     |
+# |    WR_DATA   |       196        |       195     |
+# 	------------------------------------------
+# |    RD_ADDR   |         5        |       195     |
+# |    RD_DATA   |         0        |       195     |
+# -----------------------------------------------
+# WR_COUNT=10	RD_COUNT=9
+# 
+# 
+# -=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=- 
+# REF to SCB ='{trans_enum_1:READ, rst:0, wr_addr:0, wr_data:0, rd_addr:6, rd_data:171, rd_tran_count:9, wr_tran_count:10}
+# MEMORY ='{0, 18, 0, 164, 0, 37, 171, 186}
+# -----------[SCOREBOARD]----------
+# ** Info: -------SUCCESS-------
+# | act_data =  171 | exp_data =  171 | time =  195 |
+#    Time: 195 ns  Scope: ram_pkg.ram_sb.check_data File: ../ENV/ram_sb.sv Line: 127
+# -----------------------------------------------------------------------------------
+# ** Note: $finish    : ../TOP/ram_tb_top.sv(33)
+#    Time: 200 ns  Iteration: 0  Instance: /ram_tb_top
