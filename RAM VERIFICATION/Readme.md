@@ -6,6 +6,7 @@ SIM folder consists of makefile, coverage in pdf report format, waveform file an
 TEST folder consists of testcases implemented to verify the functionality of RAM.</br>
 TOP folder consists of top file which contains DUT, interfaces and testcases.</br>
 ![RAM_ARCHITECTURE](https://github.com/AlPrime2k1/SystemVerilog/assets/84400210/e6f1bee1-0ef2-4d8b-996e-3ad93f92af63) <br>
+![RAM_ARCHITECTURE](https://github.com/AlPrime2k1/SystemVerilog/blob/RAM_VERIFICATION/RAM_ARCHITECTURE.jpg?raw=true) <BR>
 Following this architecture, mailboxes are connected from generator to drivers, monitor to reference model and scoreboard. Connections with DUV are done using interfaces as in from Drivers to DUV and from DUV to monitors.Makefile for compilation of individual tescases as well as for regression or for code coverage is provided and reports will be generated in MERGECOV folder under SIM folder.
 
 <h2>How to use</h2>
