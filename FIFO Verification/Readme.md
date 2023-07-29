@@ -33,7 +33,7 @@ Makefile for compilation, coverage based simulation of all testcases and combini
   <li> Makefile info : <ul>
     <li> Type make sim to compile and execute all testcases without coverage options. 
     <li> Type make or make all to compile, execute all testcases and generate merged report of all those cases in MERGECOV folder in SIM folder. 
-    </ul>
+    </ul> Alternatively, batch file "automate" can be used to do the same. Automate is an executable file which will execute all these commands and then ask to either restart again or quit.
   <li> Open MERGECOV folder and open index.html for coverage report. Additionally, PDF of coverage report is provided showing 100% covergroup coverage.
     </ol>
  
